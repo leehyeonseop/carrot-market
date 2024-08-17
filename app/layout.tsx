@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto, Rubik_Scribble } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -9,14 +9,6 @@ const roboto = Roboto({
   style: ["normal", "italic"],
   variable: "--roboto-text",
 });
-
-const rubick = Rubik_Scribble({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-  variable: "--rubick-text",
-});
-
 export const metadata: Metadata = {
   title: {
     template: "%s | Carrot Market",
@@ -38,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto.variable} ${rubick.variable} bg-neutral-900 text-white max-w-screen-sm mx-auto`}
+        className={`${roboto.variable} bg-neutral-900 text-white max-w-screen-sm mx-auto`}
         // style={roboto.style}
       >
         {potato}
